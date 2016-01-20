@@ -1,4 +1,4 @@
-exports.Letter = function(let) {
+var Letter = function(let) {
 	
 	this.charac = let;
 	
@@ -10,3 +10,5 @@ exports.Letter = function(let) {
 		return !(this.appear) ? " _ " : this.charac;
 	};
 };
+
+module.exports = Letter;

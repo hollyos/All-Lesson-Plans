@@ -12,21 +12,23 @@ game = {
 	guessesRemaining : 3, //per word
 	currentWrd : null, 
 	startGame : function (wrd){
+		var self = this;
+
 		//make sure the user has 3 guesses
-		resetGuessesRemaining();
+		this.resetGuessesRemaining();
 
-		this.currentWrd = new Word(wordBank[0]);
+		this.currentWrd = new Word(this.wordBank[0]);
 
-		while( guessRemaining > 0){
+		// while( this.guessRemaining > 0){
 			prompt.get(['guessLetter'], function(err, result) {
 			    // result is an object like this: { guessLetter: 'f' }
 			    //console.log(result);
 			    
 			    console.log('  The letter you guessed is: ' + result.guessLetter);
-			    this.guessRemaining--;
-			    console.log(this.guessRemaining);
+			    self.guessesRemaining--;
+			    console.log(self.guessesRemaining);
 			});
-		}
+		// }	
 	},
 	resetGuessesRemaining : function(){
 		this.guessRemaining = 10;

@@ -1,4 +1,4 @@
-exports.Word = function(wrd){
+var Word = function(wrd){
 	this.lets = []; //letter objects
 	this.found = false;
 
@@ -30,3 +30,5 @@ exports.Word = function(wrd){
 		}).join("");
 	};
 }
+
+module.exports = Word;
