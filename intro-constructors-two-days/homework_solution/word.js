@@ -1,10 +1,13 @@
+var Letter = require('./letter.js');
+
 var Word = function(wrd){
+	this.word = wrd;
 	this.lets = []; //letter objects
 	this.found = false;
 
-	this.getLets = function(wrd) {
-		for(var i = 0; i < wrd.length; i++) {
-			this.lets.push(new Letter(wrd[i]));
+	this.getLets = function() {
+		for(var i = 0; i < this.word.length; i++) {
+			this.lets.push(new Letter(this.word[i]));
 		}
 	};
 	
@@ -17,17 +20,21 @@ var Word = function(wrd){
 
 	this.checkIfLetterFound = function(guessLetter) {
 		for(var i = 0; i < this.lets.length; i++) {
-			if (lets[i].charac == guessLetter){
-				lets[i].appear = true;
+			if (this.lets[i].charac == guessLetter){
+				this.lets[i].appear = true;
 			}
 		}
 
 	};
 
-	this.render = function() {
-		return this.lets.map(function(let) {
-			return let.render();
-		}).join("");
+	this.wordRender = function() {
+		var str = '';
+		
+		for(var i=0; i < this.lets.length; i++){
+			str += this.lets[i].letterRender();
+		}
+
+		return str;
 	};
 }
 
