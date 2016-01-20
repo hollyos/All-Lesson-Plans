@@ -34,14 +34,20 @@ game = {
 		    console.log('  The letter you guessed is: ' + result.guessLetter);
 
 		    //this checks if the letter was found and if it is then it sets that specific letter in the word to be found
-		    self.currentWrd.checkIfLetterFound(result.guessLetter);
+		    var letterFound = self.currentWrd.checkIfLetterFound(result.guessLetter);
 
-		    self.guessesRemaining--;
-		    console.log(self.guessesRemaining);
+		    //if the user guessed incorrectly minus the number of guesses they have left
+		    if (!letterFound){
+		    	console.log('You guessed wrong!');
+		    	self.guessesRemaining--;
+		    }else{
+		    	console.log('You guessed right!');
+		    }
+		    
+		    console.log('Guesses remaining: ', self.guessesRemaining);
 
-		    console.log('before');
 		    console.log(self.currentWrd.wordRender());
-		  	console.log('after');
+		    console.log('here are the letters you guessed already: ');
 
 		    if ((self.guessesRemaining > 0) && (self.currentWrd.found == false)){
 		    	self.keepPromptingUser();

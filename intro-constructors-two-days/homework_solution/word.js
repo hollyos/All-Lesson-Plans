@@ -19,17 +19,23 @@ var Word = function(wrd){
 	};
 
 	this.checkIfLetterFound = function(guessLetter) {
+		var whatToReturn = null;
+
 		for(var i = 0; i < this.lets.length; i++) {
 			if (this.lets[i].charac == guessLetter){
 				this.lets[i].appear = true;
+				return true;
+			}else{
+				whatToReturn = false;
 			}
 		}
 
+		return whatToReturn;
 	};
 
 	this.wordRender = function() {
 		var str = '';
-		
+
 		for(var i=0; i < this.lets.length; i++){
 			str += this.lets[i].letterRender();
 		}
