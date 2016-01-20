@@ -12,21 +12,22 @@ var Word = function(wrd){
 	};
 	
 	//found the current word
-	this.foundIt = function() {
+	this.didWeFindTheWord = function() {
+		//sets this.found in the word object to true or false if all letter objects have a true value in their appear property
 		this.found = this.lets.every(function(curLet) {
 			return curLet.appear;
 		});
+
+		return this.found;
 	};
 
 	this.checkIfLetterFound = function(guessLetter) {
-		var whatToReturn = null;
+		var whatToReturn = 0;
 
 		for(var i = 0; i < this.lets.length; i++) {
 			if (this.lets[i].charac == guessLetter){
 				this.lets[i].appear = true;
-				return true;
-			}else{
-				whatToReturn = false;
+				whatToReturn++;
 			}
 		}
 
