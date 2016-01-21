@@ -9,9 +9,10 @@
 + Learn how to set up a basic HTML document.
 + Practice how to set up a basic HTML document.
 
-#### Exercise 1
+#### Exercise 1 (15 minutes)
 
-##### Watch Me / Demo To Class
+##### Watch Me / Demo To Class (5 minutes)
+###### Instructor Does:
 + Ask the class how to navigate to the home directory.
   - `cd ~` or `cd ..`
 + Ask the class how to print the current working directory.
@@ -20,10 +21,17 @@
   - `mkdir folder_name`
 + Ask the class how to create a new html file.
   - `touch my-first-example-page.html`
-+ Ask the class how to open the current working directory.
++ Ask the class how to open the current working directory from the Terminal/Console with the Sublime command.
   - `subl .`
 
-##### Class Exercise
+##### Class Exercise (10 minutes)
+###### Students Do:
++ From the Terminal/Console and using only the command line, create the following:
+  - A new folder
+  - A new HTML file
+  - Open the current folder containing the new HTML file.
+
+###### SOLUTION
 + Open up a new Terminal / Console window.
 + Navigate to your home directory.
   - Type `cd ~` should lead you to `/Users/user_name ~ $`
@@ -31,3 +39,7 @@
   - Type `mkdir example-page`.
 + Navigate into the newly created folder `my-first-example-page`
   - Type cd `my-first-example-page`.
++ Create a new HTML document (however the students want to name their HTML file) in the newly created folder.
+  - `touch my_first_page.html`
++ Open the current working directory from the Terminal/Console with the Sublime command.
+  - type `subl .`
