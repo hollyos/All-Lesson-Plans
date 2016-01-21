@@ -10,6 +10,7 @@ mySQL hw
 
 mysql
 100,000 records
+C-R-U-D
 
 node mySQL app
 commandline 
@@ -21,13 +22,10 @@ prime-key
 indexing
 read
 
-C-R-U-D
+table:
 
-1. see records
-2. delete 1 single record
-3. update 1 single 
-4.
-5. return base on a where
-6. two table left join
-
-100,000 
+|pk| character  | movie  | year |
+|-|------------| ------ |-------|
+|1|Cage   | Edge of Tomorrow | 2014 |
+|2|Ethan Hunt | Mission Impossible | 1996 |
+|3|Vincent | Jack Reacher  | 2012 |
