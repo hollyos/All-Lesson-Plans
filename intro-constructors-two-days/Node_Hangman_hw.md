@@ -111,41 +111,41 @@ main.js
 		- called `.getLets()` method on the `currentWrd` object 
 		- call the `keepPropmtingUser()` function with no argument, we haven't build `keepPropmtingUser` yet but will shortly
 
-- [x] *Hint: `currentWrd` is an object created with `Word` constructor it have all the function created in Word constructor*
+- [x] *Hint: `currentWrd` is now an object created with `Word` constructor it have all the function created in Word constructor*
 
 	* create a function named `keepPropmtingUser` with no argument
 		- create a variable named `self` set it to `this`
-		- [x] *Hint: because when we are inside the prompt object we will lose scope, we must store `this` inside of `self`*
-		  *and look up how npm prompt works*
+		- [x] *Hint: because when we are going inside the prompt object out `this` will lose scope, we must store `this` inside of `self`*
 		
 		- called the `prompt.get()` function with two arguments
+		- [x] *Hint: look up how npm prompt works*
 
 		- first argument is an array with one element, a string named `guessLetter`
 		- second argument is an anonymous function
-		- the anonymous function has two arguments as well (`err` and `result`)
-			* the anonymous function will
-			* console logs the string ("The Letter or space you guessed is " + result.guessLetter)
+		- the anonymous function has two arguments as well (`err`, `result`), the anonymous function will
+			* console logs ("The Letter or space you guessed is " + result.guessLetter)
 			* create a variable named `findHowManyOfUserGuess`, set it to `currentWrd.checkIfLetterFound(result.guessLetter)`
-			- [x] *Hint: this checks if the letter was found and if so, sets that specific letter to appear, it also returns a number
+			- [x] *Hint: this checks if the letter was found and if so, sets that specific letter object to appear, it also returns a number
 
 			* check if `findHowManyOfUserGuess` is 0
-				- if so console log ("You gusses wrong~!")
-				- minus 1 from the propoerty `guessesRemaining`
-			* else console log ('You guessed right!')
+				- if is 0, console log ("You gusses wrong~!")
+				- minus 1 from the value `guessesRemaining`
+			* else 
+				- console log ('You guessed right!')
 				- check if user has won the game
 				- if function `currentWrd.didWeFindTheWord()` returns `true`
-				- console log ('You Won!!!')
-				- return 1 to end the game
+					* console log ('You Won!!!')
+					* return 1 to end the game
 
-			* console log('Guesses remaining: ' + `guessesRemaining`);
-			* console log( call the `wordRender()` method on the property `cuurentWrd` )
-			- [x] *Hint: this will display all the letters guesses correct as letters and "_" has hidden letters"
+			* console log('Guesses remaining: ' + value of `guessesRemaining`);
+			* console log( call the `wordRender()` method on `currentWrd` )
+			- [x] *Hint: this will display all the letters guessed, if correct display as letters and "_" has hidden letters not yet guessed correctly"
 
-			* if the property `guessesRemaining` is greater than 0 and the property `currentWrd.found` is `false`
+			* if the value `guessesRemaining` is greater than 0 and the property `currentWrd.found` is `false`
 				- called the function `keepPromptingUser()`
 				- [x] *Hint: Yes we calling a function inside of itself the if statment stops the recursion from going infinite*
-			* else if the property `guessesRemaining` is equal to 0
-				- console log the word user was guessing
+			* else if the value `guessesRemaining` is equal to 0
+				- console log "Game over bro" and the word user was guessing
 			* else 
 				- console log (call the function `.wordRender()` on `currentWrd`)
 
