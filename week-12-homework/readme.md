@@ -14,19 +14,19 @@ indexing
 6. two table left join that returns all the zoo keepers for the zoos (if zoos and zoo keepers are seperate tables)
 
 
-Table: Zoo Info
+Table: careTaker
 
-| pk | Zoo | CareTaker  |
-|----|-----|------------|
-|  1 |  NY |    John    |
-|  2 |  NY |    Mary    |
-|  3 |  SF |    Sara    |
+| pk | Zoo | careTaker_name  |
+|----|-----|-----------------|
+|  1 |  NY |    John         |
+|  2 |  NY |    Mary         |
+|  3 |  SF |    Sara         |
 
-Table: Animal Info
+Table: animal
 
-| pk | Name  | Type  | Age | CareTaker_fk |
-|----|-------|-------|-----|--------------|
-|  1 |  Bobo |  Bear |  4  |      1       |
-|  1 |  Link |  Lion |  3  |      1       |
-|  1 |  CiCi |  Cat  |  1  |      2       |
+| pk | CareTaker_fk |  animal_Name | Type  | Age |
+|----|--------------|--------------|-------|-----|
+|  1 |      1       |  Bobo        |  Bear |  4  |
+|  1 |      1       |  Link        |  Lion |  3  |
+|  1 |      2       |  CiCi        |  Cat  |  1  |
 

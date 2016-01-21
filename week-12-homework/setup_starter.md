@@ -11,12 +11,29 @@ App setup:
 
 
 mySQL setup:
+
 launch: MySQL 5.7 Command Line Client
 enter password
 
 CREATE DATABASE myTestDB;
 USE myTestDB;
 
+CREATE TABLE careTaker (
+careTaker_id int AUTO_INCREMENT,
+city varchar(30) NOT NULL,
+name varchar(30) NOT NULL,
+PRIMARY KEY (careTaker_id)
+);
+
+CREATE TABLE animal(
+animal_id int NOT NULL AUOT_INCREMENT,
+careTaker_id int NOT NULL,
+name
+PRIMARY KEY(animal_id),
+FOREIGN KEY(stud_id) REFERENCES careTaker(careTaker_id)
+); 
+
+<!-- 
 CREATE TABLE Tasks
 (
 ID int NOT NULL AUTO_INCREMENT,
@@ -27,13 +44,9 @@ PRIMARY KEY (ID)
 );
 
 SHOW COLUMNS from Tasks;
-
 INSERT INTO Tasks (Todo, Done) VALUES ('Dishes', False) ;
-
 SELECT * FROM Tasks;
-
 DROP DATABASE myTestDB;
-
 
 CREATE TABLE department (id NOT NULL);
 CREATE TABLE employee (id NOT NULL, dept_id NOT NULL, FOREIGN KEY (dept_id) REFERENCES department(id));
@@ -50,4 +63,6 @@ rol_no int NOT NULL AUOT_INCREMENT,
 stud_id int NOT NULL,
 PRIMARY KEY(rol_no),
 FOREIGN KEY(stud_id) REFERENCES student(stud_id)
-);
+); 
+-->
+
